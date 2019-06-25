@@ -11,6 +11,9 @@
   - [Docker Machine](#Docker-Machine)
     - [Docker Machine とは](#Docker-Machine-%E3%81%A8%E3%81%AF)
     - [Docker Machine を使用する](#Docker-Machine-%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B)
+- [Docker in Azure](#Docker-in-Azure)
+  - [Cloud Shellで進めるために](#Cloud-Shell%E3%81%A7%E9%80%B2%E3%82%81%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB)
+  - [Microsoft Learn](#Microsoft-Learn)
 
 <!-- /TOC -->
 
@@ -98,3 +101,17 @@ docker run -d -p 80:80 --restart=always nginx
 ```shell
 docker-machine ip myvm
 ```
+
+# Docker in Azure
+
+## Cloud Shellで進めるために
+
+- ドキュメントに出てくる `localhost` は `docker-machine ip myvm` で取得する Docker ホストのパブリック IP アドレスと読み替えてください。
+- Cloud Shell ではエディターを使えます。
+  - [Azure Cloud Shell エディターの使用 | Microsoft Docs](https://docs.microsoft.com/ja-jp/azure/cloud-shell/using-cloud-shell-editor)
+- Cloud Shell でファイルを永続化するには `~/clouddrive` フォルダを使用してください。
+
+## Microsoft Learn
+
+- [Docker を使用してコンテナー化された Web アプリケーションを構築する - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/modules/intro-to-containers/)
+- [Azure App Service を使ってコンテナー化された Web アプリをデプロイして実行する - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/modules/deploy-run-container-app-service/)
