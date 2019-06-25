@@ -53,7 +53,7 @@ Cloud Shell から Docker をコントロールする準備をします。
 
 ### Docker Machine を使用する
 
-Cloud Shell で動かすためにはドキュメント内のコマンドの変更が必要です。ドキュメント内のコマンドを下に記載のコマンドと読み替えて進めてください。
+Cloud Shell で動かすためにはドキュメント内のコマンドで一部オプションの追加 (`--shell bash`) が必要になります。ドキュメント内のコマンドを下に記載のコマンドと読み替えて進めてください。
 
 [Docker マシンを使用して Azure で Linux ホストを作成する | Microsoft Docs](https://docs.microsoft.com/ja-jp/azure/virtual-machines/linux/docker-machine)
 
@@ -70,7 +70,9 @@ docker-machine create -d azure \
     --azure-subscription-id $sub \
     --azure-ssh-user azureuser \
     --azure-open-port 80 \
-    --azure-size "Standard_DS2_v2" \
+    --azure-open-port 8080 \
+    --azure-size "Standard_DS1_v2" \
+    --azure-location japanwest \
     myvm
 ```
 
