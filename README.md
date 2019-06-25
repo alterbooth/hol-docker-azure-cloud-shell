@@ -47,9 +47,8 @@ Cloud Shell から Docker をコントロールする準備をします。
 
 ### Docker Machine とは
 
-[Docker Machine Overview | Docker Documentation](https://docs.docker.com/machine/overview/)
-
-[Docker Machine 概要 — Docker-docs-ja 17.06.Beta ドキュメント](http://docs.docker.jp/machine/overview.html)
+- [Docker Machine Overview | Docker Documentation](https://docs.docker.com/machine/overview/)
+- [Docker Machine 概要 — Docker-docs-ja 17.06.Beta ドキュメント](http://docs.docker.jp/machine/overview.html)
 
 ### Docker Machine を使用する
 
@@ -96,6 +95,6 @@ docker run -d -p 80:80 --restart=always nginx
 
 コンテナーをテストします。
 
-```
+```shell
 docker-machine ip myvm
 ```
