@@ -111,4 +111,13 @@ docker-machine ip myvm
 ## Microsoft Learn
 
 - [Docker を使用してコンテナー化された Web アプリケーションを構築する - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/modules/intro-to-containers/)
+  - Docker HUB
+  - Docker CLI
+  - Dockerfile
+  - Azure Container Registory
+  - Azure Container Instance
 - [Azure App Service を使ってコンテナー化された Web アプリをデプロイして実行する - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/modules/deploy-run-container-app-service/)
+  - Azure Container Registory
+  - Azure Web Apps for Container
+  - 継続的デプロイ
+
