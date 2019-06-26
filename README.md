@@ -7,12 +7,11 @@
 - [Azure Cloud Shell](#Azure-Cloud-Shell)
   - [Azure Cloud Shell とは](#Azure-Cloud-Shell-%E3%81%A8%E3%81%AF)
   - [試してみる](#%E8%A9%A6%E3%81%97%E3%81%A6%E3%81%BF%E3%82%8B)
-- [Docker](#Docker)
-  - [Docker Machine](#Docker-Machine)
-    - [Docker Machine とは](#Docker-Machine-%E3%81%A8%E3%81%AF)
-    - [Docker Machine を使用する](#Docker-Machine-%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B)
+- [Docker Machine](#Docker-Machine)
+  - [Docker Machine とは](#Docker-Machine-%E3%81%A8%E3%81%AF)
+  - [Docker Machine を使用する](#Docker-Machine-%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B)
 - [Docker in Azure](#Docker-in-Azure)
-  - [Cloud Shellで進めるために](#Cloud-Shell%E3%81%A7%E9%80%B2%E3%82%81%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB)
+  - [Cloud Shell で進めるために](#Cloud-Shell-%E3%81%A7%E9%80%B2%E3%82%81%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB)
   - [Microsoft Learn](#Microsoft-Learn)
 
 <!-- /TOC -->
@@ -39,21 +38,19 @@
 
 [Azure Cloud Shell の Bash のクイックスタート | Microsoft Docs](https://docs.microsoft.com/ja-jp/azure/cloud-shell/quickstart)
 
-# Docker
-
-## Docker Machine
+# Docker Machine
 
 Cloud Shell から Docker をコントロールする準備をします。
 
 > 注意<br>
 > [Azure Cloud Shell のトラブルシューティング | Microsoft Docs](https://docs.microsoft.com/ja-jp/azure/cloud-shell/troubleshooting#cannot-run-the-docker-daemon)
 
-### Docker Machine とは
+## Docker Machine とは
 
 - [Docker Machine Overview | Docker Documentation](https://docs.docker.com/machine/overview/)
 - [Docker Machine 概要 — Docker-docs-ja 17.06.Beta ドキュメント](http://docs.docker.jp/machine/overview.html)
 
-### Docker Machine を使用する
+## Docker Machine を使用する
 
 Cloud Shell で動かすためにはドキュメント内のコマンドで一部オプションの追加 (`--shell bash`) が必要になります。ドキュメント内のコマンドを下に記載のコマンドと読み替えて進めてください。
 
@@ -104,7 +101,7 @@ docker-machine ip myvm
 
 # Docker in Azure
 
-### Cloud Shell で進めるために
+## Cloud Shell で進めるために
 
 - ドキュメントに出てくる `localhost` は `docker-machine ip myvm` で取得する Docker ホストのパブリック IP アドレスと読み替えてください。
 - Cloud Shell ではエディターを使えます。
