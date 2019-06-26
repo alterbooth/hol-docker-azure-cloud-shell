@@ -13,6 +13,9 @@
 - [Docker in Azure](#Docker-in-Azure)
   - [Cloud Shell で進めるために](#Cloud-Shell-%E3%81%A7%E9%80%B2%E3%82%81%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB)
   - [Microsoft Learn](#Microsoft-Learn)
+- [Docker Compose](#Docker-Compose)
+  - [Docker Compose とは](#Docker-Compose-%E3%81%A8%E3%81%AF)
+  - [Cloud Shell に Docker Compose をインストール](#Cloud-Shell-%E3%81%AB-Docker-Compose-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
 
 <!-- /TOC -->
 
@@ -121,3 +124,30 @@ docker-machine ip myvm
   - Azure Web Apps for Container
   - 継続的デプロイ
 
+# Docker Compose
+
+## Docker Compose とは
+
+- [Overview of Docker Compose | Docker Documentation](https://docs.docker.com/compose/overview/)
+- [Docker Compose 概要 — Docker-docs-ja 17.06.Beta ドキュメント](http://docs.docker.jp/compose/overview.html)
+
+## Cloud Shell に Docker Compose をインストール
+
+Docker Compose をインストールします。
+
+```shell
+pip install --user docker-compose
+```
+
+パスを通します。
+
+```shell
+echo "export PATH=$PATH:$HOME/.local/bin" >> ~/.bashrc
+source ~/.bashrc
+```
+
+Docker Compose のバージョンを確認して、インストールできたことを確認します。
+
+```shell
+docker-compose version
+```
