@@ -104,7 +104,7 @@ docker-machine ip myvm
 
 # Docker in Azure
 
-## Cloud Shellで進めるために
+### Cloud Shell で進めるために
 
 - ドキュメントに出てくる `localhost` は `docker-machine ip myvm` で取得する Docker ホストのパブリック IP アドレスと読み替えてください。
 - Cloud Shell ではエディターを使えます。
