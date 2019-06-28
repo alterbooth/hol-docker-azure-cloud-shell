@@ -180,9 +180,7 @@ docker-compose version
 
 ## Let's try Docker Compose
 
-[Docker Compose を使用してマルチコンテナー アプリを作成する - Azure App Service | Microsoft Docs](https://docs.microsoft.com/ja-jp/azure/app-service/containers/quickstart-multi-container)
-
-このクイックスタートでは Web App for Containers にマルチコンテナーをデプロイしています。まずは Docker Machine へデプロイ、その後 Web App for Containers へデプロイしてみましょう。
+WordPressのマルチコンテナーをデプロイします。まずは Docker Machine へデプロイ、その後 Web App for Containers へデプロイしてみましょう。
 
 ### Docker Machine へのデプロイする
 
