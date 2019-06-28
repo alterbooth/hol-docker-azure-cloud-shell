@@ -212,7 +212,7 @@ Docker Machine の IP アドレスを取得します。
 docker-machine ip myvm
 ```
 
-実行中のマルチコンテナーを確認するには Web ブラウザーを開き Docker Machine の IP アドレスを入力します。
+実行中のマルチコンテナーを確認するには Web ブラウザーを開き Docker Machine の IP アドレスを入力します。WordPress の画面が表示されます。
 
 ### Web App for Containers へデプロイする
 
