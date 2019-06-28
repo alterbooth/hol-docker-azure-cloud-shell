@@ -99,11 +99,19 @@ eval $(docker-machine env myvm --shell bash)
 docker run -d -p 80:80 --restart=always nginx
 ```
 
+コンテナーリストを表示ます
+
+```shell
+docker ps
+```
+
 コンテナーをテストします。
 
 ```shell
 docker-machine ip myvm
 ```
+
+実行中のコンテナーを確認するには Web ブラウザーを開き Docker Machine の IP アドレスを入力します。Nginx の画面が表示されます。
 
 # Docker in Azure
 
