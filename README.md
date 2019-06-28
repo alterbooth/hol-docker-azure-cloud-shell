@@ -12,11 +12,13 @@
   - [Docker Machine を使用する](#Docker-Machine-%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B)
 - [Docker in Azure](#Docker-in-Azure)
   - [Cloud Shell で進めるために](#Cloud-Shell-%E3%81%A7%E9%80%B2%E3%82%81%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB)
-  - [Docker を使用してコンテナー化された Web アプリケーションを構築する](#Docker-%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E3%83%BC%E5%8C%96%E3%81%95%E3%82%8C%E3%81%9F-Web-%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E6%A7%8B%E7%AF%89%E3%81%99%E3%82%8B)
-  - [Azure App Service を使ってコンテナー化された Web アプリをデプロイして実行する](#Azure-App-Service-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E3%83%BC%E5%8C%96%E3%81%95%E3%82%8C%E3%81%9F-Web-%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E3%81%97%E3%81%A6%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B)
+  - [Let's try Docker](#Lets-try-Docker)
 - [Docker Compose](#Docker-Compose)
   - [Docker Compose とは](#Docker-Compose-%E3%81%A8%E3%81%AF)
   - [Cloud Shell に Docker Compose をインストール](#Cloud-Shell-%E3%81%AB-Docker-Compose-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
+  - [Let's try Docker Compose](#Lets-try-Docker-Compose)
+    - [Docker Machine へのデプロイする](#Docker-Machine-%E3%81%B8%E3%81%AE%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E3%81%99%E3%82%8B)
+    - [Web App for Containers へデプロイする](#Web-App-for-Containers-%E3%81%B8%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E3%81%99%E3%82%8B)
 
 <!-- /TOC -->
 
@@ -110,11 +112,12 @@ docker-machine ip myvm
 - ドキュメントに出てくる `localhost` は `docker-machine ip myvm` で取得する Docker ホストのパブリック IP アドレスと読み替えてください。
 - Cloud Shell ではエディターを使えます。
   - [Azure Cloud Shell エディターの使用 | Microsoft Docs](https://docs.microsoft.com/ja-jp/azure/cloud-shell/using-cloud-shell-editor)
-- Cloud Shell でファイルを永続化するには `~/clouddrive` フォルダを使用してください。
+- Cloud Shell でファイルを永続化するには `~/clouddrive` フォルダを使用し
+てください。
 
-## Docker を使用してコンテナー化された Web アプリケーションを構築する
+## Let's try Docker
 
-<https://docs.microsoft.com/ja-jp/learn/modules/intro-to-containers/>
+[Docker を使用してコンテナー化された Web アプリケーションを構築する - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/modules/intro-to-containers/)
 
 ここでは次のことを行います。
 
@@ -124,9 +127,7 @@ docker-machine ip myvm
 - Azure Container Registory
 - Azure Container Instance
 
-## Azure App Service を使ってコンテナー化された Web アプリをデプロイして実行する
-
-<https://docs.microsoft.com/ja-jp/learn/modules/deploy-run-container-app-service/>
+[Azure App Service を使ってコンテナー化された Web アプリをデプロイして実行する - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/modules/deploy-run-container-app-service/)
 
 ここでは次のことを行います。
 
@@ -161,3 +162,58 @@ Docker Compose のバージョンを確認して、インストールできた�
 ```shell
 docker-compose version
 ```
+
+## Let's try Docker Compose
+
+[Docker Compose を使用してマルチコンテナー アプリを作成する - Azure App Service | Microsoft Docs](https://docs.microsoft.com/ja-jp/azure/app-service/containers/quickstart-multi-container)
+
+このクイックスタートでは Web App for Containers にマルチコンテナーをデプロイしています。まずは Docker Machine へデプロイ、その後 Web App for Containers へデプロイしてみましょう。
+
+### Docker Machine へのデプロイする
+
+ディレクトリを作成します。
+
+```shell
+mkdir quickstart
+
+cd quickstart
+```
+
+サンプルアプリをクローンします。
+
+```shell
+git clone https://github.com/Azure-Samples/multicontainerwordpress
+
+cd multicontainerwordpress
+```
+
+`docker-compose-wordpress.yml` ファイルの公開ポート番号を変更します。
+
+```diff
+        - db
+      image: wordpress:latest
+      ports:
+-       - "8000:80"
++       - "80:80"
+      restart: always
+      environment:
+        WORDPRESS_DB_HOST: db:3306
+```
+
+マルチコンテナーを起動します。
+
+```shell
+docker-compose -f docker-compose-wordpress.yml up
+```
+
+Docker Machine の IP アドレスを取得します。
+
+```shell
+docker-machine ip myvm
+```
+
+実行中のマルチコンテナーを確認するには Web ブラウザーを開き Docker Machine の IP アドレスを入力します。
+
+### Web App for Containers へデプロイする
+
+[Docker Compose を使用してマルチコンテナー アプリを作成する - Azure App Service | Microsoft Docs](https://docs.microsoft.com/ja-jp/azure/app-service/containers/quickstart-multi-container)
