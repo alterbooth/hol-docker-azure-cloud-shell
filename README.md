@@ -204,7 +204,7 @@ cd multicontainerwordpress
 マルチコンテナーを起動します。
 
 ```shell
-docker-compose -f docker-compose-wordpress.yml up
+docker-compose -f docker-compose-wordpress.yml up -d
 ```
 
 Docker Machine の IP アドレスを取得します。
