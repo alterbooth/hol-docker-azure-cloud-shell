@@ -10,8 +10,9 @@
 - [Docker Machine](#Docker-Machine)
   - [Docker Machine とは](#Docker-Machine-%E3%81%A8%E3%81%AF)
   - [Docker Machine を使用する](#Docker-Machine-%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B)
-- [Docker in Azure](#Docker-in-Azure)
-  - [Cloud Shell で進めるために](#Cloud-Shell-%E3%81%A7%E9%80%B2%E3%82%81%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB)
+- [Cloud Shell で進めるために](#Cloud-Shell-%E3%81%A7%E9%80%B2%E3%82%81%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB)
+- [Docker](#Docker)
+  - [Docker とは](#Docker-%E3%81%A8%E3%81%AF)
   - [Let's try Docker](#Lets-try-Docker)
 - [Docker Compose](#Docker-Compose)
   - [Docker Compose とは](#Docker-Compose-%E3%81%A8%E3%81%AF)
@@ -113,15 +114,20 @@ docker-machine ip myvm
 
 実行中のコンテナーを確認するには Web ブラウザーを開き Docker Machine の IP アドレスを入力します。Nginx の画面が表示されます。
 
-# Docker in Azure
-
-## Cloud Shell で進めるために
+# Cloud Shell で進めるために
 
 - ドキュメントに出てくる `localhost` は `docker-machine ip myvm` で取得する Docker ホストのパブリック IP アドレスと読み替えてください。
 - Cloud Shell ではエディターを使えます。
   - [Azure Cloud Shell エディターの使用 | Microsoft Docs](https://docs.microsoft.com/ja-jp/azure/cloud-shell/using-cloud-shell-editor)
 - Cloud Shell でファイルを永続化するには `~/clouddrive` フォルダを使用し
 てください。
+
+# Docker
+
+## Docker とは
+
+- [Docker overview | Docker Documentation](https://docs.docker.com/engine/docker-overview/)
+- [Docker 概要 — Docker-docs-ja 1.13.RC ドキュメント](http://docs.docker.jp/engine/understanding-docker.html)
 
 ## Let's try Docker
 
