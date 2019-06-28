@@ -12,7 +12,8 @@
   - [Docker Machine を使用する](#Docker-Machine-%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%99%E3%82%8B)
 - [Docker in Azure](#Docker-in-Azure)
   - [Cloud Shell で進めるために](#Cloud-Shell-%E3%81%A7%E9%80%B2%E3%82%81%E3%82%8B%E3%81%9F%E3%82%81%E3%81%AB)
-  - [Microsoft Learn](#Microsoft-Learn)
+  - [Docker を使用してコンテナー化された Web アプリケーションを構築する](#Docker-%E3%82%92%E4%BD%BF%E7%94%A8%E3%81%97%E3%81%A6%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E3%83%BC%E5%8C%96%E3%81%95%E3%82%8C%E3%81%9F-Web-%E3%82%A2%E3%83%97%E3%83%AA%E3%82%B1%E3%83%BC%E3%82%B7%E3%83%A7%E3%83%B3%E3%82%92%E6%A7%8B%E7%AF%89%E3%81%99%E3%82%8B)
+  - [Azure App Service を使ってコンテナー化された Web アプリをデプロイして実行する](#Azure-App-Service-%E3%82%92%E4%BD%BF%E3%81%A3%E3%81%A6%E3%82%B3%E3%83%B3%E3%83%86%E3%83%8A%E3%83%BC%E5%8C%96%E3%81%95%E3%82%8C%E3%81%9F-Web-%E3%82%A2%E3%83%97%E3%83%AA%E3%82%92%E3%83%87%E3%83%97%E3%83%AD%E3%82%A4%E3%81%97%E3%81%A6%E5%AE%9F%E8%A1%8C%E3%81%99%E3%82%8B)
 - [Docker Compose](#Docker-Compose)
   - [Docker Compose とは](#Docker-Compose-%E3%81%A8%E3%81%AF)
   - [Cloud Shell に Docker Compose をインストール](#Cloud-Shell-%E3%81%AB-Docker-Compose-%E3%82%92%E3%82%A4%E3%83%B3%E3%82%B9%E3%83%88%E3%83%BC%E3%83%AB)
@@ -111,18 +112,27 @@ docker-machine ip myvm
   - [Azure Cloud Shell エディターの使用 | Microsoft Docs](https://docs.microsoft.com/ja-jp/azure/cloud-shell/using-cloud-shell-editor)
 - Cloud Shell でファイルを永続化するには `~/clouddrive` フォルダを使用してください。
 
-## Microsoft Learn
+## Docker を使用してコンテナー化された Web アプリケーションを構築する
 
-- [Docker を使用してコンテナー化された Web アプリケーションを構築する - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/modules/intro-to-containers/)
-  - Docker HUB
-  - Docker CLI
-  - Dockerfile
-  - Azure Container Registory
-  - Azure Container Instance
-- [Azure App Service を使ってコンテナー化された Web アプリをデプロイして実行する - Learn | Microsoft Docs](https://docs.microsoft.com/ja-jp/learn/modules/deploy-run-container-app-service/)
-  - Azure Container Registory
-  - Azure Web Apps for Container
-  - 継続的デプロイ
+<https://docs.microsoft.com/ja-jp/learn/modules/intro-to-containers/>
+
+ここでは次のことを行います。
+
+- Docker HUB
+- Docker CLI
+- Dockerfile
+- Azure Container Registory
+- Azure Container Instance
+
+## Azure App Service を使ってコンテナー化された Web アプリをデプロイして実行する
+
+<https://docs.microsoft.com/ja-jp/learn/modules/deploy-run-container-app-service/>
+
+ここでは次のことを行います。
+
+- Azure Container Registory
+- Azure Web Apps for Container
+- 継続的デプロイ
 
 # Docker Compose
 
