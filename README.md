@@ -76,6 +76,7 @@ docker-machine create -d azure \
     --azure-subscription-id $sub \
     --azure-ssh-user azureuser \
     --azure-open-port 80 \
+    --azure-open-port 8000 \
     --azure-open-port 8080 \
     --azure-size "Standard_DS1_v2" \
     --azure-location japanwest \
@@ -180,7 +181,7 @@ docker-compose version
 
 ## Let's try Docker Compose
 
-WordPressのマルチコンテナーをデプロイします。まずは Docker Machine へデプロイ、その後 Web App for Containers へデプロイしてみましょう。
+WordPressのマルチコンテナーをデプロイします。まずは Docker Machine へデプロイ、その後 Web App for Containers へデプロイします。
 
 ### Docker Machine へのデプロイする
 
@@ -198,19 +199,6 @@ cd quickstart
 git clone https://github.com/Azure-Samples/multicontainerwordpress
 
 cd multicontainerwordpress
-```
-
-`docker-compose-wordpress.yml` ファイルの公開ポート番号を変更します。
-
-```diff
-        - db
-      image: wordpress:latest
-      ports:
--       - "8000:80"
-+       - "80:80"
-      restart: always
-      environment:
-        WORDPRESS_DB_HOST: db:3306
 ```
 
 マルチコンテナーを起動します。
