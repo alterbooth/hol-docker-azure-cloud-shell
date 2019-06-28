@@ -99,7 +99,7 @@ eval $(docker-machine env myvm --shell bash)
 docker run -d -p 80:80 --restart=always nginx
 ```
 
-コンテナーリストを表示ます
+コンテナーリストを表示します。
 
 ```shell
 docker ps
