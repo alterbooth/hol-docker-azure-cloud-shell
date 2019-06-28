@@ -116,7 +116,8 @@ docker-machine ip myvm
 
 # Cloud Shell で進めるために
 
-- ドキュメントに出てくる `localhost` は `docker-machine ip myvm` で取得する Docker ホストのパブリック IP アドレスと読み替えてください。
+- ドキュメントに出てくる **localhost** は **docker-machine ip myvm** で取得する Docker ホストのパブリック IP アドレスと読み替えてください。
+- ドキュメントに出てくる **ローカル コンピューターでコマンド プロンプト ウィンドウ** で行う手順は **Cloud Shell** を使って進めてください。
 - Cloud Shell ではエディターを使えます。
   - [Azure Cloud Shell エディターの使用 | Microsoft Docs](https://docs.microsoft.com/ja-jp/azure/cloud-shell/using-cloud-shell-editor)
 - Cloud Shell でファイルを永続化するには `~/clouddrive` フォルダを使用し
